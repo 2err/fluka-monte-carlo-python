@@ -254,3 +254,22 @@ Dzisiaj samodzielnie wykonałam całkowanie Monte Carlo w 2D dla funkcji `f(x,y)
 
 #### Wniosek
 Całkowanie Monte Carlo w 2D jest naturalnym rozszerzeniem wersji 1D i pozwala estymować objętość pod powierzchnią funkcji dwóch zmiennych. Wyniki potwierdziły poprawność metody i pokazały losowy charakter estymacji.
+
+### Dzień 10 – random walk dla różnych liczb kroków
+
+Dzisiaj porównywałam random walk 1D dla różnych liczb kroków: 10, 100 i 1000.
+
+#### Co zrobiłam
+- zasymulowałam 1000 cząstek,
+- dla każdej liczby kroków wykonałam losowy ruch w lewo lub w prawo,
+- zebrałam końcowe pozycje cząstek,
+- narysowałam histogramy końcowych pozycji,
+- obliczyłam średnią końcową pozycję i odchylenie standardowe.
+
+#### Co zaobserwowałam
+- średnia końcowa pozycja pozostawała bliska 0,
+- rozrzut końcowych pozycji rósł wraz ze wzrostem liczby kroków,
+- histogramy stawały się coraz szersze dla większej liczby kroków.
+
+#### Wniosek
+W random walk większa liczba kroków nie powoduje przesunięcia układu w jedną stronę, ale zwiększa rozproszenie końcowych pozycji. To daje intuicję, jak może zachowywać się układ wielu cząstek poruszających się losowo.
