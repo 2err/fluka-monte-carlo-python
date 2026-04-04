@@ -273,3 +273,24 @@ Dzisiaj porównywałam random walk 1D dla różnych liczb kroków: 10, 100 i 100
 
 #### Wniosek
 W random walk większa liczba kroków nie powoduje przesunięcia układu w jedną stronę, ale zwiększa rozproszenie końcowych pozycji. To daje intuicję, jak może zachowywać się układ wielu cząstek poruszających się losowo.
+
+
+### Dzień 11 – random walk 2D dla różnych liczb kroków
+
+Dzisiaj porównywałam random walk 2D dla 10, 100 i 1000 kroków.
+
+#### Co zrobiłam
+- zasymulowałam 1000 cząstek,
+- dla każdej liczby kroków wykonywałam losowe ruchy w lewo, prawo, górę i dół,
+- zapisałam końcowe położenia cząstek,
+- obliczyłam średnie końcowe wartości `x` i `y`,
+- policzyłam rozrzut położeń w obu osiach,
+- narysowałam chmury końcowych położeń.
+
+#### Co zaobserwowałam
+- średnie końcowe wartości `x` i `y` pozostawały bliskie zeru,
+- wraz ze wzrostem liczby kroków rosło rozproszenie końcowych położeń,
+- największy rozrzut pojawił się dla 1000 kroków.
+
+#### Wniosek
+Random walk 2D pokazuje, że ruch losowy nie przesuwa układu w jedną stronę, ale powoduje coraz większe rozproszenie położeń cząstek. To daje intuicję związaną z dyfuzją i transportem cząstek w dwóch wymiarach.
