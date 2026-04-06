@@ -294,3 +294,24 @@ Dzisiaj porównywałam random walk 2D dla 10, 100 i 1000 kroków.
 
 #### Wniosek
 Random walk 2D pokazuje, że ruch losowy nie przesuwa układu w jedną stronę, ale powoduje coraz większe rozproszenie położeń cząstek. To daje intuicję związaną z dyfuzją i transportem cząstek w dwóch wymiarach.
+
+### Dzień 12 – random walk z zatrzymaniem dla różnych granic
+
+Dzisiaj porównywałam random walk 1D z granicami absorbującymi `-5, 5` oraz `-10, 10`.
+
+#### Co zrobiłam
+- zasymulowałam 1000 cząstek dla każdego przypadku,
+- każda cząstka poruszała się losowo w lewo lub w prawo,
+- ruch kończył się po osiągnięciu granicy absorbującej,
+- zapisywałam liczbę kroków do zatrzymania,
+- sprawdzałam, po której stronie cząstka została zatrzymana,
+- porównywałam histogramy czasu do zatrzymania.
+
+#### Co zaobserwowałam
+- dla granic `-5, 5` cząstki zatrzymywały się średnio szybciej,
+- dla granic `-10, 10` średni czas do zatrzymania był znacznie większy,
+- liczba zatrzymań po lewej i prawej stronie była bardzo podobna,
+- układ zachowywał się symetrycznie względem zera.
+
+#### Wniosek
+Warunki brzegowe silnie wpływają na czas ruchu cząstki w random walk. Bliższe granice oznaczają szybsze zatrzymanie, a szerszy obszar pozwala cząstce poruszać się dłużej. Przy symetrycznych granicach i symetrycznych krokach liczba zatrzymań po obu stronach pozostaje podobna.
