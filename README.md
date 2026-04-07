@@ -315,3 +315,25 @@ Dzisiaj porównywałam random walk 1D z granicami absorbującymi `-5, 5` oraz `-
 
 #### Wniosek
 Warunki brzegowe silnie wpływają na czas ruchu cząstki w random walk. Bliższe granice oznaczają szybsze zatrzymanie, a szerszy obszar pozwala cząstce poruszać się dłużej. Przy symetrycznych granicach i symetrycznych krokach liczba zatrzymań po obu stronach pozostaje podobna.
+
+### Dzień 13 – porównanie transmisji dla różnych poziomów absorpcji
+
+Dzisiaj porównywałam transmisję i absorpcję dla różnych prawdopodobieństw pochłonięcia cząstek.
+
+#### Co zrobiłam
+- przyjęłam 1000 cząstek dla każdego przypadku,
+- porównałam prawdopodobieństwa absorpcji: 0.2, 0.4, 0.6 i 0.8,
+- dla każdej wartości obliczyłam:
+  - liczbę cząstek pochłoniętych,
+  - liczbę cząstek, które przeszły,
+  - transmisję,
+  - udział absorpcji,
+- narysowałam wykres transmisji.
+
+#### Co zaobserwowałam
+- transmisja malała wraz ze wzrostem prawdopodobieństwa absorpcji,
+- udział absorpcji rósł wraz ze wzrostem prawdopodobieństwa absorpcji,
+- wyniki były bliskie wartościom oczekiwanym, ale nie idealnie równe z powodu losowości symulacji.
+
+#### Wniosek
+Materiał o większym prawdopodobieństwie absorpcji przepuszcza mniej cząstek i daje mniejszą transmisję. Model pokazuje, jak interpretować liczbę zdarzeń oraz udział cząstek pochłoniętych i transmitowanych w symulacji Monte Carlo.
