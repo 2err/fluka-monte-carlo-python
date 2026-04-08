@@ -337,3 +337,26 @@ Dzisiaj porównywałam transmisję i absorpcję dla różnych prawdopodobieństw
 
 #### Wniosek
 Materiał o większym prawdopodobieństwie absorpcji przepuszcza mniej cząstek i daje mniejszą transmisję. Model pokazuje, jak interpretować liczbę zdarzeń oraz udział cząstek pochłoniętych i transmitowanych w symulacji Monte Carlo.
+
+### Dzień 14 – wpływ grubości materiału na absorpcję
+
+Dzisiaj analizowałam prosty model absorpcji zależnej od grubości materiału.
+
+#### Co zrobiłam
+- przyjęłam 1000 cząstek,
+- ustawiłam prawdopodobieństwo absorpcji w jednej warstwie na `0.3`,
+- porównałam grubości materiału: `1`, `3`, `5`, `8`, `12`,
+- dla każdej grubości liczyłam:
+  - liczbę cząstek pochłoniętych,
+  - liczbę cząstek transmitowanych,
+  - transmisję,
+  - udział absorpcji.
+
+#### Co zaobserwowałam
+- wraz ze wzrostem grubości materiału rosła liczba zdarzeń absorpcji,
+- transmisja malała bardzo wyraźnie,
+- najlepszą osłoną w tym modelu okazała się grubość `12`,
+- dla największej grubości przechodziła już tylko niewielka liczba cząstek.
+
+#### Wniosek
+Grubszy materiał daje cząstce więcej okazji do pochłonięcia, dlatego działa jako skuteczniejsza osłona. Prosty model warstwowy dobrze pokazuje intuicję osłabiania wiązki i spadku transmisji wraz ze wzrostem grubości materiału.
