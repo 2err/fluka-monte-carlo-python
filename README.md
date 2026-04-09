@@ -360,3 +360,19 @@ Dzisiaj analizowałam prosty model absorpcji zależnej od grubości materiału.
 
 #### Wniosek
 Grubszy materiał daje cząstce więcej okazji do pochłonięcia, dlatego działa jako skuteczniejsza osłona. Prosty model warstwowy dobrze pokazuje intuicję osłabiania wiązki i spadku transmisji wraz ze wzrostem grubości materiału.
+
+### Dzień 15 – czytelne wykresy do portfolio
+
+Dzisiaj uczyłam się, jak tworzyć czytelne wykresy dla wyników Monte Carlo, tak aby nadawały się do portfolio lub raportu.
+
+#### Czego się nauczyłam
+- dobry wykres powinien mieć jasny tytuł i podpisane osie,
+- typ wykresu powinien pasować do rodzaju danych,
+- legenda jest potrzebna wtedy, gdy porównuję kilka serii danych,
+- warto dodać linię odniesienia, jeśli znam wartość dokładną,
+- delikatna siatka i odpowiedni rozmiar wykresu poprawiają czytelność,
+- `tight_layout()` pomaga uporządkować wygląd wykresu,
+- wykres można zapisać do pliku PNG i wykorzystać później w README lub portfolio.
+
+#### Wniosek
+Czytelny wykres nie tylko pokazuje wynik, ale też pomaga zrozumieć jego sens. W projektach Monte Carlo wykres powinien wspierać interpretację danych, a nie być tylko ozdobą.
