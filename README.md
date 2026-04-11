@@ -376,3 +376,15 @@ Dzisiaj uczyłam się, jak tworzyć czytelne wykresy dla wyników Monte Carlo, t
 
 #### Wniosek
 Czytelny wykres nie tylko pokazuje wynik, ale też pomaga zrozumieć jego sens. W projektach Monte Carlo wykres powinien wspierać interpretację danych, a nie być tylko ozdobą.
+
+### Projekt podsumowujący – transmisja przez materiał warstwowy
+
+W projekcie zasymulowano przejście wiązki cząstek przez materiał o różnej grubości metodą Monte Carlo. Każda warstwa dawała cząstce określone prawdopodobieństwo absorpcji. Dla każdej grubości wykonano 20 niezależnych uruchomień, aby policzyć średnią transmisję oraz odchylenie standardowe.
+
+#### Co zaobserwowałam
+- transmisja malała wraz ze wzrostem liczby warstw,
+- grubszy materiał przepuszczał coraz mniejszą część wiązki,
+- odchylenie standardowe między uruchomieniami było niewielkie względem głównego trendu.
+
+#### Wniosek
+Projekt pokazał, że prosty model warstwowy pozwala połączyć losowość, absorpcję, transmisję, analizę niepewności i prezentację wyników na wykresie. Jest to uproszczona, ale sensowna intuicja osłabiania wiązki w materiale.
