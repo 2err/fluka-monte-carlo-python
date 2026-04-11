@@ -453,5 +453,6 @@ W projekcie zasymulowano przejście wiązki cząstek przez materiał o różnej 
 #### Wniosek
 Projekt pokazał, że prosty model warstwowy pozwala połączyć losowość, absorpcję, transmisję, analizę niepewności i prezentację wyników na wykresie. Jest to uproszczona, ale sensowna intuicja osłabiania wiązki w materiale.
 
+#### Projekty: 
 33_mc_transport_summary_project.py
 33_particle in layerd material.py
