@@ -387,4 +387,4 @@ W projekcie zasymulowano przejście wiązki cząstek przez materiał o różnej 
 - odchylenie standardowe między uruchomieniami było niewielkie względem głównego trendu.
 
 #### Wniosek
-Projekt pokazał, że prosty model warstwowy pozwala połączyć losowość, absorpcję, transmisję, analizę niepewności i prezentację wyników na wykresie. Jest to uproszczona, ale sensowna intuicja osłabiania wiązki w materiale.
+Projekt pokazał, że prosty model warstwowy pozwala połączyć losowość, absorpcję, transmisję, analizę niepewności i prezentację wyników na wykresie. Jest to uproszczona, ale sensowna intuicja osłabiania wiązki w materiale.gir
