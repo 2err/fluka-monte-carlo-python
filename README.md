@@ -456,3 +456,25 @@ Projekt pokazał, że prosty model warstwowy pozwala połączyć losowość, abs
 #### Projekty: 
 33_mc_transport_summary_project.py
 33_particle in layerd material.py
+
+### Dzień 17 – porównanie dwóch materiałów i interpretacja niepewności
+
+Dzisiaj porównywałam dwa materiały o różnych prawdopodobieństwach absorpcji w modelu warstwowym Monte Carlo.
+
+#### Co zrobiłam
+- porównałam materiał `M.1` (`p_absorption = 0.15`) i materiał `M.2` (`p_absorption = 0.30`),
+- dla każdej grubości wykonałam wiele niezależnych uruchomień,
+- policzyłam średnią transmisję i odchylenie standardowe,
+- narysowałam wykres z error barami.
+
+#### Co zaobserwowałam
+- materiał `M.2` dawał niższą transmisję dla wszystkich analizowanych grubości,
+- w obu materiałach transmisja malała wraz ze wzrostem liczby warstw,
+- odchylenie standardowe było niewielkie w porównaniu do różnicy między materiałami.
+
+#### Wniosek
+Porównywanie modeli Monte Carlo wymaga patrzenia nie tylko na średni wynik, ale też na rozrzut między uruchomieniami. W tym projekcie różnica między materiałami była wyraźna i wyglądała na sensowną fizycznie, a nie tylko losową.
+
+#### Projekty:
+34_compare_materials_homework.py
+34_compare_two_materials_uncertainty.py
