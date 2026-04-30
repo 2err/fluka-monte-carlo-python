@@ -1,5 +1,20 @@
 # FLUKA i Monte Carlo w Pythonie
 
+Repozytorium dokumentuje moją naukę metod Monte Carlo w Pythonie oraz przygotowanie do pracy z tematami związanymi z FLUKA, transportem cząstek, absorpcją, transmisją i prostymi modelami fizycznymi.
+
+## Co znajdziesz w repo
+- skrypty Python z kolejnych etapów nauki
+- proste modele Monte Carlo
+- wykresy i mini-projekty
+- dziennik postępów
+
+## Jak uruchomić projekt
+```bash
+uv sync
+# albo
+pip install -r requirements.txt
+```
+
 ## Cel nauki
 Uczę się metod Monte Carlo w Pythonie oraz przygotowuję się do pracy z tematami związanymi z analizą danych, symulacjami i środowiskiem FLUKA.
 
@@ -16,12 +31,22 @@ Uczę się metod Monte Carlo w Pythonie oraz przygotowuję się do pracy z temat
 - wizualizacja wyników,
 - budowanie mini-projektów do portfolio i CV.
 
+## Autorstwo i sposób przygotowania materiałów
+
+W repozytorium znajdują się zarówno przykłady tworzone wspólnie w ramach procesu nauki, jak i zadania wykonywane samodzielnie.
+
+- Skrypty bez dopisku `homework` zostały przygotowane z wykorzystaniem wsparcia ChatGPT podczas wspólnej nauki, omawiania teorii i budowania przykładów.
+- Skrypty z dopiskiem `homework` stanowią moją indywidualną pracę i samodzielne rozwiązania zadań.
+
 ### Dzień 1 23.03
 - skonfigurowałam środowisko w PyCharm
 - podpięłam lokalne `.venv`
 - uruchomiłam pierwszy skrypt z `numpy`, `pandas`, `matplotlib`
 - przećwiczyłam losowanie z rozkładu jednostajnego
 - zaobserwowałam, że wraz ze wzrostem liczby prób średnia zbliża się do wartości teoretycznej 0.5
+
+#### Projekty: 
+01_start
 
 ### Dzień 2 – losowość, histogram i seed
 
@@ -43,6 +68,10 @@ Dzisiaj ćwiczyłam podstawy losowości w Pythonie z użyciem biblioteki NumPy.
 #### Wniosek
 Seed nie sprawia, że liczby są bardziej losowe, ale pozwala odtworzyć dokładnie tę samą sekwencję wyników. Histogram pomaga wizualnie ocenić rozkład danych, a średnia daje ich pojedyncze podsumowanie liczbowe.
 
+#### Projekty: 
+02_uniform_sampling
+03_monte_carlo_pi
+04_hist_uniform
 
 ### Dzień 3 – podstawy statystyki do Monte Carlo
 
@@ -65,6 +94,11 @@ Dzisiaj ćwiczyłam podstawowe pojęcia statystyczne potrzebne do metod Monte Ca
 #### Wniosek
 Monte Carlo opiera się nie tylko na losowaniu, ale też na analizie statystycznej wyników. Im większa liczba prób, tym zwykle bardziej stabilne są wyniki i lepsze przybliżenie wartości oczekiwanej.
 
+#### Projekty: 
+05_seed_test
+06_seed_histogram.
+07_compare_sample_sizes
+07_homework_compare_seeds
 
 ### Dzień 4 – estymacja liczby pi metodą Monte Carlo
 
@@ -83,6 +117,11 @@ Dzisiaj uczyłam się estymacji liczby pi metodą Monte Carlo.
 - sprawdzam, czy kolejne wyniki zbliżają się do prawdziwej wartości pi,
 - pamiętam, że stabilizacja oznacza ogólny trend poprawy, a nie idealnie równy spadek błędu w każdej próbie.
 
+#### Projekty: 
+08_basic_statistics.py
+09_compare_statistics.py
+09_homework_compare stat.py
+
 
 ### Dzień 5 – rozrzut wyników i niepewność w Monte Carlo
 
@@ -99,6 +138,13 @@ Dzisiaj uczyłam się interpretować rozrzut wyników Monte Carlo i opisywać ni
 #### Wniosek
 Metoda Monte Carlo daje wynik przybliżony, który naturalnie waha się między kolejnymi uruchomieniami. Aby sensownie ocenić jakość wyniku, trzeba patrzeć nie tylko na pojedynczą estymację, ale też na rozrzut i niepewność.
 
+#### Projekty:
+10_monte_carlo_pi.py
+11_pi_stability.py]
+12_pi_convergence_plot.py
+12_pi_homework.py
+13_pi_uncer_homework.py
+13_pi_uncertainty.py
 
 #### Dzień 5 - notatka M-C
 
@@ -136,39 +182,6 @@ Rozrzut oznacza, że kolejne uruchomienia tej samej symulacji mogą dawać troch
 Niepewność mówi, o ile wynik może się jeszcze wahać z powodu losowości metody.
 Mniejsze odchylenie standardowe oznacza mniejszy rozrzut i większą stabilność estymacji.
 
-### Pytania kontrolne – metoda Monte Carlo
-
-**Dlaczego metoda Monte Carlo jest nazywana metodą statystyczną?**  
-Ponieważ opiera się na wielu losowych próbach i analizie statystycznej wyników, takich jak średnia, rozrzut i niepewność.
-
-**Co daje wykonanie wielu losowych prób zamiast jednej?**  
-Pozwala lepiej oszacować wynik, ocenić jego stabilność oraz opisać rozrzut i niepewność estymacji.
-
-**Jaka jest różnica między błędem a niepewnością?**  
-Błąd to różnica między wynikiem estymacji a wartością rzeczywistą lub oczekiwaną. Niepewność opisuje, jak bardzo wynik może się wahać z powodu losowości metody.
-
-**Dlaczego Monte Carlo bywa przydatna tam, gdzie trudno policzyć coś dokładnie wzorem?**  
-Ponieważ pozwala oszacować wynik przez wiele losowych prób i analizę otrzymanych rezultatów, nawet dla bardzo złożonych problemów.
-
-**Co oznacza, że wynik Monte Carlo jest przybliżeniem, a nie dokładną odpowiedzią?**  
-Oznacza to, że wynik nie jest idealnie dokładny, tylko stanowi oszacowanie, które może różnić się od wartości rzeczywistej i jest obarczone niepewnością.
-
-### Podsumowanie tygodnia 1
-
-Po pierwszym tygodniu nauki rozumiem podstawy metody Monte Carlo:
-- rolę losowości i seeda,
-- znaczenie histogramu, średniej i odchylenia standardowego,
-- sens wykonywania wielu prób,
-- estymację liczby pi metodą Monte Carlo,
-- pojęcia rozrzutu, błędu i niepewności.
-
-Najlepiej rozumiem ogólną ideę metody, podstawy statystyki i wpływ liczby prób na stabilność wyniku.
-
-Do dalszej pracy pozostaje:
-- bardziej precyzyjne i techniczne formułowanie odpowiedzi,
-- lepsze rozróżnianie błędu i niepewności,
-- utrwalenie, że większa próbka nie zmienia rozkładu, tylko lepiej go odwzorowuje,
-- dokładniejsze wyjaśnianie geometrycznej logiki estymacji liczby pi.
 
 ### Dzień 6 – całkowanie Monte Carlo dla f(x)=x^3
 
@@ -193,6 +206,12 @@ Dzisiaj samodzielnie wykonałam całkowanie Monte Carlo dla funkcji `f(x)=x^3` n
 #### Wniosek
 Całkowanie Monte Carlo pozwala oszacować wartość całki na podstawie losowania punktów i średniej wartości funkcji. Większa liczba prób zwykle prowadzi do lepszej i bardziej stabilnej estymacji.
 
+#### Projekty:
+
+14_mc_integration_x2.py
+15_mc_integration_stability.py
+16_mc_integration_x.py
+
 ### Dzień 7 – porównanie zwykłego Monte Carlo i importance sampling
 
 Dzisiaj porównywałam zwykłe Monte Carlo oraz importance sampling dla całki funkcji `f(x)=x^3` na przedziale `[0,1]`.
@@ -215,6 +234,12 @@ Dzisiaj porównywałam zwykłe Monte Carlo oraz importance sampling dla całki f
 #### Wniosek
 Importance sampling może poprawić jakość estymacji, jeśli częściej losuje punkty w obszarach, które mają większy wpływ na wartość całki. Dzięki temu przy tej samej liczbie prób można uzyskać dokładniejszy i mniej rozrzutny wynik.
 
+#### Projekty:
+17_importance_sampling_intro.py
+18_importance_sampling_compare.py
+18_importance_sampling_homework.py
+
+
 ### Dzień 8 – matematyka importance sampling i Monte Carlo w 2D
 
 Dzisiaj uczyłam się matematycznego sensu importance sampling oraz estymacji pola obszaru w 2D metodą Monte Carlo.
@@ -234,6 +259,11 @@ Dzisiaj uczyłam się matematycznego sensu importance sampling oraz estymacji po
 
 #### Wniosek
 Monte Carlo w 2D jest naturalnym rozwinięciem wcześniejszych metod: zamiast średniej wysokości funkcji można estymować pole obszaru przez zliczanie punktów spełniających odpowiedni warunek geometryczny.
+
+#### Projekty:
+19_area_under_curve_mc.py
+19_area_under_homework.py
+
 
 ### Dzień 9 – samodzielne całkowanie Monte Carlo 2D
 
@@ -255,6 +285,11 @@ Dzisiaj samodzielnie wykonałam całkowanie Monte Carlo w 2D dla funkcji `f(x,y)
 #### Wniosek
 Całkowanie Monte Carlo w 2D jest naturalnym rozszerzeniem wersji 1D i pozwala estymować objętość pod powierzchnią funkcji dwóch zmiennych. Wyniki potwierdziły poprawność metody i pokazały losowy charakter estymacji.
 
+#### Projekty:
+20_mc_2d_integration_xy.py
+21_mc_2d_integration_stability.py
+21_mc_integration_2d_homework.py
+
 ### Dzień 10 – random walk dla różnych liczb kroków
 
 Dzisiaj porównywałam random walk 1D dla różnych liczb kroków: 10, 100 i 1000.
@@ -274,6 +309,10 @@ Dzisiaj porównywałam random walk 1D dla różnych liczb kroków: 10, 100 i 100
 #### Wniosek
 W random walk większa liczba kroków nie powoduje przesunięcia układu w jedną stronę, ale zwiększa rozproszenie końcowych pozycji. To daje intuicję, jak może zachowywać się układ wielu cząstek poruszających się losowo.
 
+#### Projekty:
+22_random_walk_1d.py
+23_homework_randomwalk_different steps.py
+23_random_walk_many_particles.py
 
 ### Dzień 11 – random walk 2D dla różnych liczb kroków
 
@@ -295,6 +334,12 @@ Dzisiaj porównywałam random walk 2D dla 10, 100 i 1000 kroków.
 #### Wniosek
 Random walk 2D pokazuje, że ruch losowy nie przesuwa układu w jedną stronę, ale powoduje coraz większe rozproszenie położeń cząstek. To daje intuicję związaną z dyfuzją i transportem cząstek w dwóch wymiarach.
 
+#### Projekty:
+24_random_walk_2d_single.py
+25_random_2d_homework.py
+25_random_walk_2d_many.py
+
+
 ### Dzień 12 – random walk z zatrzymaniem dla różnych granic
 
 Dzisiaj porównywałam random walk 1D z granicami absorbującymi `-5, 5` oraz `-10, 10`.
@@ -315,3 +360,121 @@ Dzisiaj porównywałam random walk 1D z granicami absorbującymi `-5, 5` oraz `-
 
 #### Wniosek
 Warunki brzegowe silnie wpływają na czas ruchu cząstki w random walk. Bliższe granice oznaczają szybsze zatrzymanie, a szerszy obszar pozwala cząstce poruszać się dłużej. Przy symetrycznych granicach i symetrycznych krokach liczba zatrzymań po obu stronach pozostaje podobna.
+
+#### Projekty:
+26_random_walk_absorbing_1d_single.py
+27_random_walk_absorbing_1d_many.py
+27_random_walk_absorbing_homework.py
+
+### Dzień 13 – porównanie transmisji dla różnych poziomów absorpcji
+
+Dzisiaj porównywałam transmisję i absorpcję dla różnych prawdopodobieństw pochłonięcia cząstek.
+
+#### Co zrobiłam
+- przyjęłam 1000 cząstek dla każdego przypadku,
+- porównałam prawdopodobieństwa absorpcji: 0.2, 0.4, 0.6 i 0.8,
+- dla każdej wartości obliczyłam:
+  - liczbę cząstek pochłoniętych,
+  - liczbę cząstek, które przeszły,
+  - transmisję,
+  - udział absorpcji,
+- narysowałam wykres transmisji.
+
+#### Co zaobserwowałam
+- transmisja malała wraz ze wzrostem prawdopodobieństwa absorpcji,
+- udział absorpcji rósł wraz ze wzrostem prawdopodobieństwa absorpcji,
+- wyniki były bliskie wartościom oczekiwanym, ale nie idealnie równe z powodu losowości symulacji.
+
+#### Wniosek
+Materiał o większym prawdopodobieństwie absorpcji przepuszcza mniej cząstek i daje mniejszą transmisję. Model pokazuje, jak interpretować liczbę zdarzeń oraz udział cząstek pochłoniętych i transmitowanych w symulacji Monte Carlo.
+
+#### Projekty:
+28_absorption_model_basic.py
+29_absorption_compare.py
+29_absorption_homework.py
+
+### Dzień 14 – wpływ grubości materiału na absorpcję
+
+Dzisiaj analizowałam prosty model absorpcji zależnej od grubości materiału.
+
+#### Co zrobiłam
+- przyjęłam 1000 cząstek,
+- ustawiłam prawdopodobieństwo absorpcji w jednej warstwie na `0.3`,
+- porównałam grubości materiału: `1`, `3`, `5`, `8`, `12`,
+- dla każdej grubości liczyłam:
+  - liczbę cząstek pochłoniętych,
+  - liczbę cząstek transmitowanych,
+  - transmisję,
+  - udział absorpcji.
+
+#### Co zaobserwowałam
+- wraz ze wzrostem grubości materiału rosła liczba zdarzeń absorpcji,
+- transmisja malała bardzo wyraźnie,
+- najlepszą osłoną w tym modelu okazała się grubość `12`,
+- dla największej grubości przechodziła już tylko niewielka liczba cząstek.
+
+#### Wniosek
+Grubszy materiał daje cząstce więcej okazji do pochłonięcia, dlatego działa jako skuteczniejsza osłona. Prosty model warstwowy dobrze pokazuje intuicję osłabiania wiązki i spadku transmisji wraz ze wzrostem grubości materiału.
+
+#### Projekty:
+30_abs_vs_thick_homework.py
+30_absorption_vs_thickness.py
+
+### Dzień 15 – czytelne wykresy do portfolio
+
+Dzisiaj uczyłam się, jak tworzyć czytelne wykresy dla wyników Monte Carlo, tak aby nadawały się do portfolio lub raportu.
+
+#### Czego się nauczyłam
+- dobry wykres powinien mieć jasny tytuł i podpisane osie,
+- typ wykresu powinien pasować do rodzaju danych,
+- legenda jest potrzebna wtedy, gdy porównuję kilka serii danych,
+- warto dodać linię odniesienia, jeśli znam wartość dokładną,
+- delikatna siatka i odpowiedni rozmiar wykresu poprawiają czytelność,
+- `tight_layout()` pomaga uporządkować wygląd wykresu,
+- wykres można zapisać do pliku PNG i wykorzystać później w README lub portfolio.
+
+#### Wniosek
+Czytelny wykres nie tylko pokazuje wynik, ale też pomaga zrozumieć jego sens. W projektach Monte Carlo wykres powinien wspierać interpretację danych, a nie być tylko ozdobą.
+
+#### Projekty:
+31_portfolio_plot_transmission.py
+32_homework_integral_beautiful_graph.py
+32_portfolio_histogram_absorption_time.py
+
+### Dzień 16: Projekt podsumowujący – transmisja przez materiał warstwowy
+
+W projekcie zasymulowano przejście wiązki cząstek przez materiał o różnej grubości metodą Monte Carlo. Każda warstwa dawała cząstce określone prawdopodobieństwo absorpcji. Dla każdej grubości wykonano 20 niezależnych uruchomień, aby policzyć średnią transmisję oraz odchylenie standardowe.
+
+#### Co zaobserwowałam
+- transmisja malała wraz ze wzrostem liczby warstw,
+- grubszy materiał przepuszczał coraz mniejszą część wiązki,
+- odchylenie standardowe między uruchomieniami było niewielkie względem głównego trendu.
+
+#### Wniosek
+Projekt pokazał, że prosty model warstwowy pozwala połączyć losowość, absorpcję, transmisję, analizę niepewności i prezentację wyników na wykresie. Jest to uproszczona, ale sensowna intuicja osłabiania wiązki w materiale.
+
+#### Projekty: 
+33_mc_transport_summary_project.py
+33_particle in layerd material.py
+
+### Dzień 17 – porównanie dwóch materiałów i interpretacja niepewności
+
+Dzisiaj porównywałam dwa materiały o różnych prawdopodobieństwach absorpcji w modelu warstwowym Monte Carlo.
+
+#### Co zrobiłam
+- porównałam materiał `M.1` (`p_absorption = 0.15`) i materiał `M.2` (`p_absorption = 0.30`),
+- dla każdej grubości wykonałam wiele niezależnych uruchomień,
+- policzyłam średnią transmisję i odchylenie standardowe,
+- narysowałam wykres z error barami.
+
+#### Co zaobserwowałam
+- materiał `M.2` dawał niższą transmisję dla wszystkich analizowanych grubości,
+- w obu materiałach transmisja malała wraz ze wzrostem liczby warstw,
+- odchylenie standardowe było niewielkie w porównaniu do różnicy między materiałami.
+
+#### Wniosek
+Porównywanie modeli Monte Carlo wymaga patrzenia nie tylko na średni wynik, ale też na rozrzut między uruchomieniami. W tym projekcie różnica między materiałami była wyraźna i wyglądała na sensowną fizycznie, a nie tylko losową.
+
+#### Projekty:
+34_compare_materials_homework.py
+34_compare_two_materials_uncertainty.py
